@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { config } from "./config";
 
 interface Message {
   id: string;
@@ -27,7 +28,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/chat", {
+      const response = await fetch(`${config.apiUrl}/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
