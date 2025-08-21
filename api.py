@@ -50,6 +50,7 @@ conversations = {}
 async def root():
     """Root endpoint with API information"""
     return {
+        "status": "ok",
         "message": "AI Agent API is running!",
         "version": "1.0.0",
         "endpoints": {
